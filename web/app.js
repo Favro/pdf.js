@@ -2107,8 +2107,7 @@ let validateFileURL;
 if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
   const HOSTED_VIEWER_ORIGINS = [
     "null",
-    "http://mozilla.github.io",
-    "https://mozilla.github.io",
+    `${window.location.protocol}//${window.location.host}`,
   ];
   validateFileURL = function (file) {
     if (file === undefined) {
